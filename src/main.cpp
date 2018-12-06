@@ -78,7 +78,7 @@ void loop(){
   if(!unlockButtonState && unlockWasButtonPressed && canUnlock){
     locked = false;
     canUnlock = false;
-  }else if(!lockButtonState && lockButtonWasPressed){
+  }else if(!lockButtonState && lockButtonWasPressed && !locked){
     locked = true;
     elapsedSeconds = 0;
     canUnlock = false;
